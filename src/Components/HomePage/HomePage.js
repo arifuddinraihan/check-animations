@@ -1,12 +1,12 @@
-import { Player, PlayerEvent } from '@lottiefiles/react-lottie-player';
+import { Player } from '@lottiefiles/react-lottie-player';
 import React from 'react';
 import './HomePage.css'
 
 
 const HomePage = () => {
-    
+
     return (
-        <div className=''>
+        <div className='flex flex-col justify-center'>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <Player src={'https://assets5.lottiefiles.com/packages/lf20_jkfnmn31.json'}
@@ -20,6 +20,8 @@ const HomePage = () => {
                         <button className="btn btn-primary">Get Started</button>
                     </div>
                 </div>
+            </div>
+            <div className=''>
             </div>
         </div>
     );

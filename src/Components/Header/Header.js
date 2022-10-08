@@ -4,7 +4,7 @@ import './Header.css'
 
 const Header = () => {
     return (
-        <div>
+        <div className='shadow-lg sticky top-0 z-50'>
             <div className="navbar bg-cyan-400 ">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -25,7 +25,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="navbar-center">
-                    <a href='/home' className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <Link to={'/home'} className="btn btn-ghost normal-case text-xl">daisyUI</Link>
                 </div>
                 <div className="navbar-end">
                     <button className="btn btn-ghost btn-circle">
