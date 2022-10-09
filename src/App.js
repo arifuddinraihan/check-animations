@@ -12,6 +12,7 @@ function App() {
     {
       Path: '/',
       element: <Main></Main>,
+      loader: () => fetch (`https://fakestoreapi.com/products`),
       children: [
         {
           path: '/',
@@ -23,7 +24,8 @@ function App() {
         },
         {
           path: '/shop',
-          element: <Shop></Shop>
+          element: <Shop></Shop>,
+          loader: () => fetch (`https://fakestoreapi.com/products`),
         },
         {
           path: '/about',
