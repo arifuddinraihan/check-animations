@@ -7,6 +7,9 @@ import './Shop.css'
 
 const Shop = () => {
     const products = useContext(ProductsContext)
+    const addToCart = () => {
+        console.log("btn click")
+    };
     return (
         <div className='text-center my-4'>
             <h2 className='text-bold text-lg md:text-2xl'>Check out this Products</h2>
@@ -14,8 +17,9 @@ const Shop = () => {
                 {
                     products.map(product => <Card 
                         key={product.id} 
+                        addToCart={addToCart}
                         product={product}>
-
+                        
                         </Card>)
                 }
             </div>
