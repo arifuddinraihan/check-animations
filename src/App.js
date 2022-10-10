@@ -29,7 +29,8 @@ function App() {
         },
         {
           path: '/about',
-          element: <About></About>
+          element: <About></About>,
+          loader: () => fetch(`data.json`),
         },
       ],
       errorElement: <ErrorPage></ErrorPage>,
