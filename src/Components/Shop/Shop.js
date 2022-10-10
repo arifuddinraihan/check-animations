@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import Card from '../Card/Card';
 import { ProductsContext } from '../Layout/Main';
 import './Shop.css'
@@ -8,6 +9,7 @@ import './Shop.css'
 const Shop = () => {
     const products = useContext(ProductsContext)
     const addToCart = () => {
+        toast.info('Product Added!', {autoClose: 500})
         console.log("btn click")
     };
     return (
