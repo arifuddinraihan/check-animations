@@ -12,7 +12,7 @@ function App() {
     {
       Path: '/',
       element: <Main></Main>,
-      loader: () => fetch (`products.json`),
+      loader: () => fetch(`products.json`),
       children: [
         {
           path: '/',
@@ -25,7 +25,7 @@ function App() {
         {
           path: '/shop',
           element: <Shop></Shop>,
-          loader: () => fetch (`products.json`),
+          loader: () => fetch(`products.json`),
         },
         {
           path: '/about',
@@ -33,6 +33,10 @@ function App() {
           loader: () => fetch(`data.json`),
         },
       ],
+      errorElement: <ErrorPage></ErrorPage>,
+    },
+    {
+      path: '/',
       errorElement: <ErrorPage></ErrorPage>,
     },
   ])
