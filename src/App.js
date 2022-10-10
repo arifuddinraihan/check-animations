@@ -5,6 +5,7 @@ import HomePage from './Components/HomePage/HomePage';
 import Main from './Components/Layout/Main';
 import Shop from './Components/Shop/Shop';
 import ErrorPage from './Components/ErrorHandle/ErrorHandle';
+import Cart from './Components/Cart/Cart';
 
 function App() {
 
@@ -26,6 +27,10 @@ function App() {
           path: '/shop',
           element: <Shop></Shop>,
           loader: () => fetch(`products.json`),
+        },
+        {
+          path: '/cart',
+          element: <Cart></Cart>
         },
         {
           path: '/about',
