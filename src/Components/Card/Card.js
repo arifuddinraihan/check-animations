@@ -11,7 +11,7 @@ const Card = ({product , addToCart}) => {
                 <p>{category}</p>
                 <p>Price: ${price}</p>
                 <div className="card-actions justify-end">
-                    <button onClick={addToCart}
+                    <button onClick={() => addToCart(product)}
                     className="btn btn-primary">Buy Now</button>
                 </div>
             </div>
